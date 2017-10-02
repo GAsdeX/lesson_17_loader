@@ -1,0 +1,112 @@
+// out: ../css/style.css, sourcemap: true, compress: true
+
+
+//prepared colors sheet
+@blue: #2980b9;
+@grey: #27ae60;
+@orange: #e67e22;
+@cloud: #ecf0f1;
+@danger: #e74c3c;
+
+.vh-align {
+
+}
+
+html, body, h1, h2, h3 , h4, h5 h6, p , a, ul, li{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-decoration: none;
+	font-family: Arial;
+}
+
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: block;
+
+	&:after {
+		content: "";
+		display: table;
+		clear: bouth;
+	}
+}
+
+//site content goes here
+
+.site-content {
+	.loader-box	 {
+		margin-top: 100px;
+		width: 400px;
+		display: table;
+
+		.loader-bar {
+			display: table-cell;
+			padding: 15px;
+
+			.loader-progress {
+				width: 300px;
+				height: 10px;
+				background: grey;
+
+				.loader-snack {
+					height: 100%;
+					display: block;
+					background: green;
+					width: 0%;
+				}
+			}
+		}
+		.loader-status {
+
+		}
+	}
+	.round-loader {
+		display: block;
+		width: 200px;
+		height: 200px;
+		position: relative;
+		margin: 30px;
+
+		.overlay {
+			display: none;
+		   background: white;
+		   position: absolute;
+		   z-index: 12;
+		   left: 0;
+		   top: 0;
+		   bottom: 0;
+		   width: 50%;
+
+		}
+		.left-bar {
+			border: 2px solid green;
+			border-right: 0;
+			width: 50%;
+			height: 100%;
+			display: inline-block;
+			box-sizing: border-box;
+			position: absolute;
+			left: 0;
+			border-top-left-radius: 100% 50%;
+			border-bottom-left-radius: 100% 50%;
+			transform-origin: 100% 50%;
+		}
+		.right-bar {
+			border: 2px solid green;
+			border-left: 0;
+			width: 50%;
+			height: 100%;
+			display: inline-block;
+			box-sizing: border-box;
+			position: absolute;
+			right: 0;
+			border-top-right-radius: 100% 50%;
+			border-bottom-right-radius: 100% 50%;
+			transform-origin: 0 50%;
+		}
+	}
+}
+
+@import "media.less";
